@@ -12,5 +12,9 @@ public class LojaService : ILojaService
         return _context.Lojas.ToList();
     }
 
-   
+     public Loja GetLojaById(int id)
+    {
+        return _context.Lojas.FirstOrDefault(l => l.Id == id);
+    }
+
 }
