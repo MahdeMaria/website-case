@@ -1,6 +1,6 @@
 public class Loja
 {
-    public int Id { get; set; }
+    public int Id { get; }
     public string CNPJ { get; set; } = string.Empty;
     public string RazaoSocial { get; set; } = string.Empty;
     public string? NomeFantasia { get; set; }
