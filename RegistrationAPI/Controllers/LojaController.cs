@@ -37,5 +37,18 @@ namespace RegistrationAPI.Controllers
             _lojaService.CreateLoja(loja);
             return CreatedAtAction(nameof(GetLojaById), new { id = loja.Id }, loja);
         }
+
+        [HttpPut("{id}")]
+        public ActionResult UpdateLoja(int id, [FromBody] Loja loja)
+        {
+            if (id != loja.Id)
+            {
+            return BadRequest();
+            }
+
+            _lojaService.UpdateLoja(loja);
+            return NoContent();
+        }
+        
 }
 }
