@@ -30,5 +30,12 @@ namespace RegistrationAPI.Controllers
             }
             return Ok(loja);
         }
+
+        [HttpPost]
+        public ActionResult CreateLoja([FromBody] Loja loja)
+        {
+            _lojaService.CreateLoja(loja);
+            return CreatedAtAction(nameof(GetLojaById), new { id = loja.Id }, loja);
+        }
 }
 }

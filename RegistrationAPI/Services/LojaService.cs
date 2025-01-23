@@ -16,5 +16,11 @@ public class LojaService : ILojaService
     {
         return _context.Lojas.FirstOrDefault(l => l.Id == id);
     }
+    
+    public void CreateLoja(Loja loja)
+    {
+        _context.Lojas.Add(loja);
+        _context.SaveChanges();
+    }
 
 }
