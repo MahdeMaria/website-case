@@ -5,5 +5,5 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
 
-    public DbSet<Loja> Loja { get; set; }
+    public DbSet<Loja> Lojas { get; set; }
 }

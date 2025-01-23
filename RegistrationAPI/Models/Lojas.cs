@@ -17,5 +17,5 @@ public class Loja
     public string CEP { get; set; } = string.Empty;
     public int? ProprietarioId { get; set; }
 
-    public Usuario? Proprietario { get; set; }
+    //public Usuario? Proprietario { get; set; }
 }
