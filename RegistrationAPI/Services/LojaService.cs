@@ -29,6 +29,13 @@ public class LojaService : ILojaService
         _context.SaveChanges();
     }
 
-     
-
+    public void DeleteLoja(int id)
+    {
+        var loja = _context.Lojas.FirstOrDefault(l => l.Id == id);
+        if (loja != null)
+        {
+            _context.Lojas.Remove(loja);
+            _context.SaveChanges();
+        }
+    }
 }

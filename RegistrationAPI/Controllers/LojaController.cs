@@ -50,5 +50,17 @@ namespace RegistrationAPI.Controllers
             return NoContent();
         }
         
+        [HttpDelete("{id}")]
+        public ActionResult DeleteLoja(int id)
+        {
+            var loja = _lojaService.GetLojaById(id);
+            if (loja == null)
+            {
+                return NotFound();
+            }
+
+            _lojaService.DeleteLoja(id);
+            return NoContent();
+        }
 }
 }
