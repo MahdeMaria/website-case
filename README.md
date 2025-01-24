@@ -57,3 +57,25 @@ Adicione a string de conexão para o banco de dados:
 ```bash
 dotnet ef database update
 ```
+
+# FrontEnd
+
+Configuração do Projeto
+
+Pré-requisitos:
+
+Node.js: Certifique-se de ter o Node.js instalado para o frontend.
+Angular CLI: Instale globalmente para rodar o projeto Angular.
+
+```bash
+npm install -g @angular/cli
+```
+
+2 - Instale as dependências:
+```bash
+npm install
+```
+3 - Para iniciar o servidor de desenvolvimento:
+```bash
+ng serve
+```
