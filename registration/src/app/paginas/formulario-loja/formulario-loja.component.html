@@ -1,0 +1,124 @@
+<app-container>
+  <header>
+    <section class="cabecalho-link"></section>
+    <section class="cabecalho-contato">
+      <h1>Adicionar Loja</h1>
+    </section>
+  </header>
+  <app-separador></app-separador>
+  <form [formGroup]="lojaForm" (ngSubmit)="salvarLoja()">
+
+    <label for="CNPJ">Número do CNPJ</label>
+    <input type="text" id="CNPJ" placeholder="Digite o número do CNPJ" formControlName="CNPJ"/>
+
+    <div *ngIf="lojaForm.get('CNPJ')?.errors && lojaForm.get('CNPJ')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="RazaoSocial">Razão Social</label>
+    <input type="text" id="RazaoSocial" placeholder="Digite a Razão Social" formControlName="RazaoSocial"/>
+
+    <div *ngIf="lojaForm.get('RazaoSocial')?.errors && lojaForm.get('RazaoSocial')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="NomeFantasia">Nome Fantasia</label>
+    <input type="text" id="NomeFantasia" placeholder="Digite o Nome Fantasia" formControlName="NomeFantasia"/>
+
+    <div *ngIf="lojaForm.get('NomeFantasia')?.errors && lojaForm.get('NomeFantasia')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="DataAbertura">Data de Abertura</label>
+    <input type="date" id="DataAbertura" placeholder="Data de Abertura" formControlName="DataAbertura"/>
+
+    <div *ngIf="lojaForm.get('DataAbertura')?.errors && lojaForm.get('DataAbertura')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="DataEncerrada">Data de Encerrada</label>
+    <input type="date" id="DataEncerrada" placeholder="Data de Encerrada" formControlName="DataEncerrada"/>
+
+    <div *ngIf="lojaForm.get('DataEncerrada')?.errors && lojaForm.get('DataEncerrada')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Status">Status</label>
+    <select formControlName="Status" id="Status" [(ngModel)]="statusSelecionado">
+      <option value="em_construcao">Em construção</option>
+      <option value="aberta">Aberta</option>
+      <option value="encerrada">Encerrada</option>
+    </select>
+
+    <div *ngIf="lojaForm.get('Status')?.errors && lojaForm.get('Status')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Telefone">Telefone</label>
+    <input type="text" id="Telefone" placeholder="Digite o telefone da loja" formControlName="Telefone"/>
+
+    <div *ngIf="lojaForm.get('Telefone')?.errors && lojaForm.get('Telefone')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <app-separador></app-separador>
+    
+    <label for="Logradouro">Endereço</label>
+    <input type="text" id="Logradouro" placeholder="Digite o Logradouro" formControlName="Logradouro"/>
+
+    <div *ngIf="lojaForm.get('Logradouro')?.errors && lojaForm.get('Logradouro')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Numero">Número</label>
+    <input type="text" id="Numero" placeholder="Digite o Número" formControlName="Numero"/>
+
+    <div *ngIf="lojaForm.get('Numero')?.errors && lojaForm.get('Numero')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Complemento">Complemento</label>
+    <input type="text" id="Complemento" placeholder="Digite o Complemento" formControlName="Complemento"/>
+
+    <div *ngIf="lojaForm.get('Complemento')?.errors && lojaForm.get('Complemento')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Bairro">Bairro</label>
+    <input type="text" id="Bairro" placeholder="Digite o Bairro" formControlName="Bairro"/>
+
+    <div *ngIf="lojaForm.get('Bairro')?.errors && lojaForm.get('Bairro')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Cidade">Cidade</label>
+    <input type="text" id="Cidade" placeholder="Digite a Cidade" formControlName="Cidade"/>
+
+    <div *ngIf="lojaForm.get('Cidade')?.errors && lojaForm.get('Cidade')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="Estado">Estado</label>
+    <input type="text" id="Estado" placeholder="Digite o Estado" formControlName="Estado"/>
+
+    <div *ngIf="lojaForm.get('Estado')?.errors && lojaForm.get('Estado')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <label for="CEP">CEP</label>
+    <input type="text" id="CEP" placeholder="Digite o CEP" formControlName="CEP"/>
+
+    <div *ngIf="lojaForm.get('CEP')?.errors && lojaForm.get('CEP')?.touched" class="mensagem-erro">
+      Campo obrigatório
+    </div>
+
+    <app-separador></app-separador>
+    
+    <section class="botoes">
+      <button (click)="cancelar()" class="botao-cancelar" type="button">Cancelar</button>
+      <button [disabled]="lojaForm.invalid" [ngClass]="lojaForm.valid ? 'botao-salvar' : 'botao-desabilitado'" type="submit">
+        Salvar loja
+      </button>
+    </section>
+  </form>
+</app-container>

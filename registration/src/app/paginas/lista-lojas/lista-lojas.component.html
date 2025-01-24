@@ -1,0 +1,17 @@
+<app-container>
+  
+
+  <section class="adicionar-contato">
+    <button routerLink="/formulario" class="btn btn-primary">
+      <span>Adicionar Loja</span>
+    </button>
+  </section>
+
+  <ul class="list-group">
+    <!-- Itera sobre as lojas e exibe o nome de cada loja -->
+    <li *ngFor="let loja of lojas" class="list-group-item">
+      <!-- Exibe o nome fantasia de cada loja -->
+      {{ loja.NomeFantasia }} <strong> {{ loja.CNPJ }} </strong>
+    </li>
+  </ul>
+</app-container>
