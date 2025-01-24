@@ -1,26 +1,16 @@
-<section class="contato">
+<section class="loja">
     <ul>
-        <li><strong>CNPJ:</strong> {{ CNPJ }}</li>
-        <li><strong>Razão Social:</strong> {{ RazaoSocial }}</li>
-        <li><strong>Nome Fantasia:</strong> {{ NomeFantasia }}</li>
-        <li><strong>Data de Abertura:</strong> {{ DataAbertura }}</li>
-        <li><strong>Data de Encerramento:</strong> {{ DataEncerrada }}</li>
-        <li><strong>Telefone:</strong> {{ Telefone }}</li>
-        <li><strong>Logradouro:</strong> {{ Logradouro }}</li>
-        <li><strong>Número:</strong> {{ Numero }}</li>
-        <li><strong>Complemento:</strong> {{ Complemento }}</li>
-        <li><strong>Bairro:</strong> {{ Bairro }}</li>
-        <li><strong>Cidade:</strong> {{ Cidade }}</li>
-        <li><strong>Estado:</strong> {{ Estado }}</li>
-        <li><strong>CEP:</strong> {{ CEP }}</li>
-        <li><strong>Status:</strong> {{ Status }}</li>
         <li>
-          <button>
-            <img src="/assets/pencil-square.png" alt="Editar">
-          </button>
-          <button>
-            <img src="/assets/trash.png" alt="Excluir">
-          </button>
+            <strong>{{ NomeFantasia }}</strong>
         </li>
-      </ul>
-    </section>
+        <li>{{ CNPJ }}</li>
+        <li>
+            <button>
+                <img src="/assets/pencil-square.png" alt="">
+            </button>
+            <button>
+                <img src="/assets/trash.png" alt="">
+            </button>
+        </li>
+    </ul>
+</section>

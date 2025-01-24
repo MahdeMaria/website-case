@@ -10,17 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class LojaComponent {
   @Input() CNPJ: string = '';
-  @Input() RazaoSocial: string = '';
   @Input() NomeFantasia: string = '';
-  @Input() DataAbertura: string = '';
-  @Input() DataEncerrada: string = '';
-  @Input() Telefone: string = '';
-  @Input() Logradouro: string = '';
-  @Input() Numero: string = '';
-  @Input() Complemento: string = '';
-  @Input() Bairro: string = '';
-  @Input() Cidade: string = '';
-  @Input() Estado: string = '';
-  @Input() CEP: string = '';
-  @Input() Status: string = '';
 }
